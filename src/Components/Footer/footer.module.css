@@ -1,0 +1,5 @@
+footer {
+    grid-row: 3/4;
+    grid-column:1/6 ;
+    background-color: deepskyblue;
+}
