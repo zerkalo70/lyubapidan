@@ -1,20 +1,18 @@
 import React from "react";
-import s from "./aside.module.css";
+import s from "./nav.module.css";
 
-function Aside() {
+function Nav() {
     return (
-        <aside>
-            <nav>
-                <ul className={s.nav}>
+            <div className={s.nav}>
+                <ul>
                     <li><a>Профиль</a></li>
                     <li><a>Сообщения</a></li>
                     <li><a>Новости</a></li>
                     <li><a>Музыка</a></li>
                     <li><a>Настройки</a></li>
                 </ul>
-            </nav>
-        </aside>
+            </div>
     )
 }
 
-export default Aside
+export default Nav
