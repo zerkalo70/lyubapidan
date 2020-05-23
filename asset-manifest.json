@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/lyubapidan/static/css/main.5dcb8622.chunk.css",
+    "main.js": "/lyubapidan/static/js/main.b7f92544.chunk.js",
+    "main.js.map": "/lyubapidan/static/js/main.b7f92544.chunk.js.map",
+    "runtime-main.js": "/lyubapidan/static/js/runtime-main.9c9ed90c.js",
+    "runtime-main.js.map": "/lyubapidan/static/js/runtime-main.9c9ed90c.js.map",
+    "static/js/2.5618404d.chunk.js": "/lyubapidan/static/js/2.5618404d.chunk.js",
+    "static/js/2.5618404d.chunk.js.map": "/lyubapidan/static/js/2.5618404d.chunk.js.map",
+    "index.html": "/lyubapidan/index.html",
+    "precache-manifest.7005d977e193ea1c4549817f49e27807.js": "/lyubapidan/precache-manifest.7005d977e193ea1c4549817f49e27807.js",
+    "service-worker.js": "/lyubapidan/service-worker.js",
+    "static/css/main.5dcb8622.chunk.css.map": "/lyubapidan/static/css/main.5dcb8622.chunk.css.map",
+    "static/js/2.5618404d.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.5618404d.chunk.js.LICENSE.txt",
+    "static/media/LogoF1.png": "/lyubapidan/static/media/LogoF1.48d09aeb.png",
+    "static/media/LogoF2.jpg": "/lyubapidan/static/media/LogoF2.2952645f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c9ed90c.js",
+    "static/js/2.5618404d.chunk.js",
+    "static/css/main.5dcb8622.chunk.css",
+    "static/js/main.b7f92544.chunk.js"
+  ]
+}
