@@ -3,3 +3,9 @@
     grid-column: 1/2;
     background-color: yellowgreen;
 }
+
+ul {
+    list-style-type: none;
+    font-size: 30px;
+    color: darkviolet;
+}

@@ -1,15 +1,16 @@
 import React from "react";
 import s from "./post.module.css";
+import Women1 from "./Women1.jpg"
 
-function Post() {
+type PropsType = {
+    message: string
+}
+
+function Post(props: PropsType) {
     return (
                 <div className={s.post}>
-                    <div>
-                        Post 1
-                    </div>
-                    <div>
-                        Post 2
-                    </div>
+                    <img src={Women1} alt="iso"/>
+                        {props.message}
                 </div>
     )
 }
