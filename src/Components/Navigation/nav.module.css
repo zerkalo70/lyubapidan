@@ -4,8 +4,21 @@
     background-color: yellowgreen;
 }
 
-ul {
+.item {
     list-style-type: none;
     font-size: 30px;
+}
+
+.item :hover {
     color: blueviolet;
 }
+
+.item a {
+    color: mediumvioletred;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: blue;
+}
+
