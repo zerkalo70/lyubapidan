@@ -1,17 +1,13 @@
-import LogoF2 from "./Images/LogoF2.jpg";
 import React from "react";
 import s from "./profile.module.css";
 import MyPosts from "./MyPosts/myPosts";
+import ProfileInfo from "./ProfileInfo/profileInfo";
+
 
 function Profile() {
     return (
         <div className={s.profile}>
-            <div>
-                <img className={s.main} src={LogoF2} alt="iso"/>
-            </div>
-            <div>
-                ava + description
-            </div>
+            <ProfileInfo/>
             <MyPosts/>
             </div>
     )
