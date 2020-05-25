@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lyubapidan/static/css/main.b70fca2a.chunk.css",
-    "main.js": "/lyubapidan/static/js/main.4109c0d2.chunk.js",
-    "main.js.map": "/lyubapidan/static/js/main.4109c0d2.chunk.js.map",
+    "main.css": "/lyubapidan/static/css/main.c037981a.chunk.css",
+    "main.js": "/lyubapidan/static/js/main.92918f64.chunk.js",
+    "main.js.map": "/lyubapidan/static/js/main.92918f64.chunk.js.map",
     "runtime-main.js": "/lyubapidan/static/js/runtime-main.9c9ed90c.js",
     "runtime-main.js.map": "/lyubapidan/static/js/runtime-main.9c9ed90c.js.map",
     "static/js/2.63220e49.chunk.js": "/lyubapidan/static/js/2.63220e49.chunk.js",
     "static/js/2.63220e49.chunk.js.map": "/lyubapidan/static/js/2.63220e49.chunk.js.map",
     "index.html": "/lyubapidan/index.html",
-    "precache-manifest.bd9f460f4813118284b66658d40ed12c.js": "/lyubapidan/precache-manifest.bd9f460f4813118284b66658d40ed12c.js",
+    "precache-manifest.cc9b60c981daf2831b3b007ca2218ad3.js": "/lyubapidan/precache-manifest.cc9b60c981daf2831b3b007ca2218ad3.js",
     "service-worker.js": "/lyubapidan/service-worker.js",
-    "static/css/main.b70fca2a.chunk.css.map": "/lyubapidan/static/css/main.b70fca2a.chunk.css.map",
+    "static/css/main.c037981a.chunk.css.map": "/lyubapidan/static/css/main.c037981a.chunk.css.map",
     "static/js/2.63220e49.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.63220e49.chunk.js.LICENSE.txt",
     "static/media/LogoF1.png": "/lyubapidan/static/media/LogoF1.48d09aeb.png",
     "static/media/LogoF2.jpg": "/lyubapidan/static/media/LogoF2.2952645f.jpg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.9c9ed90c.js",
     "static/js/2.63220e49.chunk.js",
-    "static/css/main.b70fca2a.chunk.css",
-    "static/js/main.4109c0d2.chunk.js"
+    "static/css/main.c037981a.chunk.css",
+    "static/js/main.92918f64.chunk.js"
   ]
 }
