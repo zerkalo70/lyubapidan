@@ -2,16 +2,19 @@ import React from "react";
 import s from "./myPosts.module.css";
 import Post from "./Post/post";
 
+type PostsType = {
+    id: number
+    message: string
+    likesCount: number
+}
 
+type PropsType = {
+    posts: Array<PostsType>
+}
 
-function MyPosts() {
+function MyPosts(props: PropsType) {
 
-    let posts = [
-        {id: 1, message: "Hello!", likesCount: 10},
-        {id: 2, message: "Yo-Yo!", likesCount: 11}
-    ]
-
-    let postsElements = posts.map(p =>
+    let postsElements = props.posts.map(p =>
         <Post message={p.message} likesCount={p.likesCount}/>);
 
     return (
@@ -19,10 +22,10 @@ function MyPosts() {
             <h3>My posts</h3>
             <div>
                 <div>
-                <textarea>a</textarea>
+                    <textarea>a</textarea>
                 </div>
                 <div>
-                <button>Add Post</button>
+                    <button>Add Post</button>
                 </div>
             </div>
             <div className={s.posts}>

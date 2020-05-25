@@ -3,13 +3,24 @@ import s from "./profile.module.css";
 import MyPosts from "./MyPosts/myPosts";
 import ProfileInfo from "./ProfileInfo/profileInfo";
 
+type PostsType = {
+    id: number
+    message: string
+    likesCount: number
+}
 
-function Profile() {
+type PropsType = {
+    posts: Array<PostsType>
+}
+
+
+function Profile(props: PropsType) {
+
     return (
         <div className={s.profile}>
             <ProfileInfo/>
-            <MyPosts/>
-            </div>
+            <MyPosts posts={props.posts}/>
+        </div>
     )
 }
 

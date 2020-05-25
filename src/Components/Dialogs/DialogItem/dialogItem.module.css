@@ -3,9 +3,12 @@
     grid-template-columns: 2fr 10fr;
 }
 
-.dialogsItems {
-    grid-column: 1/2;
-    padding: 10px;
+.active {
+    color: mediumvioletred;
+}
+
+.dialog a {
+    text-decoration: none;
 }
 
 .messages {

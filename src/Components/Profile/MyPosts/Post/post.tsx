@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./post.module.css";
-import Women1 from "./Women1.jpg"
+import Women1 from "./Women1.jpg";
 
 type PropsType = {
     message: string
-    likesCount: any
+    likesCount: number
 }
 
 function Post(props: PropsType) {
@@ -13,7 +13,7 @@ function Post(props: PropsType) {
             <img src={Women1} alt="iso"/>
             {props.message}
             <div>
-            <span>like: {props.likesCount}</span>
+                <span>like: {props.likesCount}</span>
             </div>
         </div>
     )
