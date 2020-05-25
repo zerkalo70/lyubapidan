@@ -4,14 +4,18 @@ import Women1 from "./Women1.jpg"
 
 type PropsType = {
     message: string
+    likesCount: any
 }
 
 function Post(props: PropsType) {
     return (
-                <div className={s.post}>
-                    <img src={Women1} alt="iso"/>
-                        {props.message}
-                </div>
+        <div className={s.post}>
+            <img src={Women1} alt="iso"/>
+            {props.message}
+            <div>
+            <span>like: {props.likesCount}</span>
+            </div>
+        </div>
     )
 }
 

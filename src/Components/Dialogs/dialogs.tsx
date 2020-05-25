@@ -22,15 +22,32 @@ return (
 }
 
 function Dialogs() {
+
+    let dialogs = [
+        {id: 1, name: "Маша"},
+        {id: 2, name: "Даша"}
+    ]
+
+    let messages = [
+        {id: 1, message: "Привет!"},
+        {id: 2, message: "Здорово!"}
+    ]
+
+    let dialogsElements = dialogs.map(d => <DialogItem name = {d.name} id = {d.id}/>)
+
+    let messagesElements = messages.map(m => <Message message = {m.message}/>)
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name = "Маша" id = "1"/>
-                <DialogItem name = "Даша" id = "2"/>
+                {dialogsElements}
+                {/*<DialogItem name = "Маша" id = "1"/>*/}
+                {/*<DialogItem name = "Даша" id = "2"/>*/}
             </div>
             <div className={s.messages}>
-                <Message message = "Привет"/>
-                <Message message = "Здорово!"/>
+                {messagesElements}
+                {/*<Message message = "Привет"/>*/}
+                {/*<Message message = "Здорово!"/>*/}
             </div>
         </div>
     )
