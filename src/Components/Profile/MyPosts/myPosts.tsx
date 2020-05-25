@@ -8,7 +8,7 @@ function MyPosts() {
 
     let posts = [
         {id: 1, message: "Hello!", likesCount: 10},
-        {id: 2, message: "Yo!", likesCount: 11}
+        {id: 2, message: "Yo-Yo!", likesCount: 11}
     ]
 
     let postsElements = posts.map(p =>
