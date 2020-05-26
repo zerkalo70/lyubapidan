@@ -3,7 +3,7 @@ import s from "./myPosts.module.css";
 import Post from "./Post/post";
 
 type PostsType = {
-    id: number
+    id: string
     message: string
     likesCount: number
 }

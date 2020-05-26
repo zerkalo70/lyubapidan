@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/myPosts";
 import ProfileInfo from "./ProfileInfo/profileInfo";
 
 type PostsType = {
-    id: number
+    id: string
     message: string
     likesCount: number
 }

@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {v1} from "uuid";
 
 let posts = [
-    {id: 1, message: "Hello!", likesCount: 10},
-    {id: 2, message: "Yo-Yo!", likesCount: 11}
+    {id: v1(), message: "Hello!", likesCount: 10},
+    {id: v1(), message: "Yo-Yo!", likesCount: 11}
 ];
 
 let dialogs = [
-    {id: 1, name: "Маша"},
-    {id: 2, name: "Даша"}
+    {id: v1(), name: "Маша"},
+    {id: v1(), name: "Даша"}
 ];
 
 let messages = [
-    {id: 1, message: "Привет!"},
-    {id: 2, message: "Здорово!"}
+    {id: v1(), message: "Привет!"},
+    {id: v1(), message: "Здорово!"}
 ];
 
 ReactDOM.render(
