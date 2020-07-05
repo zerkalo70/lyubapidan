@@ -3,23 +3,14 @@ import s from "./profile.module.css";
 import MyPosts from "./MyPosts/myPosts";
 import ProfileInfo from "./ProfileInfo/profileInfo";
 
-type PostsType = {
-    id: string
-    message: string
-    likesCount: number
-}
-
-type PropsType = {
-    posts: Array<PostsType>
-}
 
 
-const Profile = (props: PropsType) => {
+const Profile = (props: any) => {
 
     return (
         <div className={s.profile}>
             <ProfileInfo/>
-            <MyPosts posts={props.posts}/>
+            <MyPosts/>
         </div>
     )
 }

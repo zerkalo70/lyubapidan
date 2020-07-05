@@ -5,25 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {v1} from "uuid";
 
-let posts = [
-    {id: v1(), message: "Hello!", likesCount: 10},
-    {id: v1(), message: "Yo-Yo!", likesCount: 11}
-];
 
-let dialogs = [
-    {id: v1(), name: "Маша"},
-    {id: v1(), name: "Даша"}
-];
 
-let messages = [
-    {id: v1(), message: "Привет!"},
-    {id: v1(), message: "Здорово!"}
-];
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <App posts={posts}
-             dialogs={dialogs} messages={messages}/>
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 );
