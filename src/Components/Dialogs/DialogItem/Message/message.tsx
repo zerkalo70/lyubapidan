@@ -5,7 +5,7 @@ type PropsType = {
     message: string
 }
 
-function Message(props: PropsType) {
+const Message = (props: PropsType) => {
     return (
         <div className={s.message}>{props.message}</div>
     )

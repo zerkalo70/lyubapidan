@@ -7,7 +7,7 @@ type PropsType = {
     likesCount: number
 }
 
-function Post(props: PropsType) {
+const Post = (props: PropsType) => {
     return (
         <div className={s.post}>
             <img src={Women1} alt="iso"/>

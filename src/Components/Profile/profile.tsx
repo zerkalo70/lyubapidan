@@ -14,7 +14,7 @@ type PropsType = {
 }
 
 
-function Profile(props: PropsType) {
+const Profile = (props: PropsType) => {
 
     return (
         <div className={s.profile}>

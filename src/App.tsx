@@ -29,7 +29,7 @@ type PropsType = {
     messages: Array<MessagesType>
 }
 
-function App(props: PropsType) {
+const App = (props: PropsType) => {
 
     return (
         <BrowserRouter>

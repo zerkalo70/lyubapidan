@@ -2,7 +2,7 @@ import LogoF1 from "./Images/LogoF1.png";
 import React from "react";
 import s from "./header.module.css"
 
-function Header() {
+const Header = () => {
     return (
         <header>
             <div>

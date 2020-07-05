@@ -3,7 +3,7 @@ import s from "./profileInfo.module.css";
 import LogoF2 from "../Images/LogoF2.jpg";
 
 
-function ProfileInfo() {
+const ProfileInfo = () => {
     return (
         <div className={s.profileInfo}>
             <div>

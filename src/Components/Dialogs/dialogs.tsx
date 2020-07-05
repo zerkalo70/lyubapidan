@@ -18,7 +18,7 @@ type PropsType = {
     messages: Array<MessagesType>
 }
 
-function Dialogs(props: PropsType) {
+const Dialogs = (props: PropsType) => {
 
     let dialogsElements = props.dialogs.map(d =>
         <DialogItem name={d.name} id={d.id}/>)
