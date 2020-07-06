@@ -3,14 +3,6 @@ import s from "./dialogs.module.css";
 import DialogItem, {DialogItemType} from "./DialogItem/dialogItem";
 import Message, {MessageType} from "./DialogItem/Message/message";
 
-// type Message = {
-//     message: string
-// }
-//
-// type DialogItem = {
-//     id: number
-//     name: string
-// }
 
 export type Dialogs = {
     dialogs: Array<DialogItemType>
