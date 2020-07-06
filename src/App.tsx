@@ -6,10 +6,18 @@ import Nav from "./Components/Navigation/nav";
 import Profile from "./Components/Profile/profile";
 import Dialogs from "./Components/Dialogs/dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
+import {PostType} from "./Components/Profile/MyPosts/Post/post";
+import {DialogItemType} from "./Components/Dialogs/DialogItem/dialogItem";
+import {MessageType} from "./Components/Dialogs/DialogItem/Message/message";
 
 
+type AppPropsType = {
+    posts: Array<PostType>
+    dialogs: Array<DialogItemType>
+    messages: Array<MessageType>
+}
 
-const App = (props: any) => {
+const App = (props: AppPropsType) => {
 
     return (
         <BrowserRouter>
@@ -17,13 +25,11 @@ const App = (props: any) => {
                 <Header/>
                 <Nav/>
                 <div className="lyubaProjectContent">
-                    {/*<Route path={'/profile'} component = { Profile }/>*/}
-                    {/*<Route path={'/dialogs'} component = { Dialogs }/>*/}
-
                     <Route path={'/profile'} render = {
                         () => <Profile posts={props.posts}/> }/>
                     <Route path={'/dialogs'} render = {
-                        () => <Dialogs dialogs={props.dialogs} messages={props.messages}/> }/>
+                        () => <Dialogs dialogs={
+                            props.dialogs} messages={props.messages}/> }/>
                 </div>
                 <Footer/>
             </div>

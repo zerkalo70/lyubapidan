@@ -1,8 +1,11 @@
 import React from "react";
 import s from "./message.module.css";
 
+export type MessageType = {
+    message: string
+}
 
-const Message = (props: any) => {
+const Message = (props: MessageType) => {
     return (
         <div className={s.dialogItem}>{props.message}</div>
     )
