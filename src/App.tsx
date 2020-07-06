@@ -8,20 +8,27 @@ import Dialogs from "./Components/Dialogs/dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-const App = () => {
 
+const App = (props: any) => {
 
     return (
+        <BrowserRouter>
             <div className="lyubaProject">
                 <Header/>
                 <Nav/>
                 <div className="lyubaProjectContent">
-                    <Profile/>
-                    <Dialogs/>
+                    {/*<Route path={'/profile'} component = { Profile }/>*/}
+                    {/*<Route path={'/dialogs'} component = { Dialogs }/>*/}
+
+                    <Route path={'/profile'} render = {
+                        () => <Profile posts={props.posts}/> }/>
+                    <Route path={'/dialogs'} render = {
+                        () => <Dialogs dialogs={props.dialogs} messages={props.messages}/> }/>
                 </div>
                 <Footer/>
             </div>
-    );
+        </BrowserRouter>
+    )
 }
 
 export default App;

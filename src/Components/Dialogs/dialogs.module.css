@@ -8,6 +8,12 @@
     padding: 10px;
 }
 
+.dialogsItems .active {
+    color: mediumvioletred;
+}
+
+.dialogItem {}
+
 .messages {
     grid-column: 2/3;
     padding: 10px;

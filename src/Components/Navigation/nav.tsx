@@ -1,15 +1,16 @@
 import React from "react";
 import s from "./nav.module.css";
+import {NavLink} from "react-router-dom";
 
 const Nav = () => {
     return (
             <div className={s.nav}>
                 <ul className={s.item}>
                     <li>
-                        <a>Профиль</a>
+                        <NavLink to = {"/profile"} activeClassName={s.active}>Профиль</NavLink>
                     </li>
                     <li>
-                        <a >Сообщения</a>
+                        <NavLink to = {"/dialogs"} activeClassName={s.active}>Сообщения</NavLink>
                     </li>
                     <li>
                         <a>Новости</a>

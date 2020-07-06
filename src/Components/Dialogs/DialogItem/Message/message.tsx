@@ -4,7 +4,7 @@ import s from "./message.module.css";
 
 const Message = (props: any) => {
     return (
-        <div className={s.message}>{props.message}</div>
+        <div className={s.dialogItem}>{props.message}</div>
     )
 }
 
