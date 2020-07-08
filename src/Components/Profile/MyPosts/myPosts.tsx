@@ -5,6 +5,7 @@ import Post, {PostType} from "./Post/post";
 
 export type MyPosts = {
     posts: Array<PostType>
+    addPost: (postMessage: string) => void
 }
 
 const MyPosts = (props: MyPosts) => {
@@ -15,8 +16,11 @@ const MyPosts = (props: MyPosts) => {
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
     let addPost = () => {
-        let text = newPostElement.current?.value;
-        alert(text);
+        if (newPostElement.current) {
+        // let text = newPostElement.current?.value;
+        props.addPost(newPostElement.current.value);
+            newPostElement.current.value = ' ';
+    }
     }
 
     return (
@@ -24,7 +28,7 @@ const MyPosts = (props: MyPosts) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}>a</textarea>
+                    <textarea ref={newPostElement}> </textarea>
                 </div>
                 <div>
                     <button onClick={addPost}>Add Post</button>

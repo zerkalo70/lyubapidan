@@ -6,6 +6,7 @@ import {PostType} from "./MyPosts/Post/post";
 
 export type Profile = {
     posts: Array<PostType>
+    addPost: (postMessage: string) => void
 }
 
 const Profile = (props: Profile) => {
@@ -13,7 +14,7 @@ const Profile = (props: Profile) => {
     return (
         <div className={s.profile}>
             <ProfileInfo/>
-            <MyPosts posts={props.posts}/>
+            <MyPosts posts={props.posts} addPost={props.addPost}/>
         </div>
     )
 }
