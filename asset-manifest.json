@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/lyubapidan/static/css/main.8ce95a91.chunk.css",
-    "main.js": "/lyubapidan/static/js/main.f62cb989.chunk.js",
-    "main.js.map": "/lyubapidan/static/js/main.f62cb989.chunk.js.map",
+    "main.js": "/lyubapidan/static/js/main.6b210113.chunk.js",
+    "main.js.map": "/lyubapidan/static/js/main.6b210113.chunk.js.map",
     "runtime-main.js": "/lyubapidan/static/js/runtime-main.9c9ed90c.js",
     "runtime-main.js.map": "/lyubapidan/static/js/runtime-main.9c9ed90c.js.map",
-    "static/js/2.3f9bbf9e.chunk.js": "/lyubapidan/static/js/2.3f9bbf9e.chunk.js",
-    "static/js/2.3f9bbf9e.chunk.js.map": "/lyubapidan/static/js/2.3f9bbf9e.chunk.js.map",
+    "static/js/2.ea99cf70.chunk.js": "/lyubapidan/static/js/2.ea99cf70.chunk.js",
+    "static/js/2.ea99cf70.chunk.js.map": "/lyubapidan/static/js/2.ea99cf70.chunk.js.map",
     "index.html": "/lyubapidan/index.html",
-    "precache-manifest.8187faec8de7ef49238fc162d990df0b.js": "/lyubapidan/precache-manifest.8187faec8de7ef49238fc162d990df0b.js",
+    "precache-manifest.4bb6fb2c221085b2de6bf00fc693935c.js": "/lyubapidan/precache-manifest.4bb6fb2c221085b2de6bf00fc693935c.js",
     "service-worker.js": "/lyubapidan/service-worker.js",
     "static/css/main.8ce95a91.chunk.css.map": "/lyubapidan/static/css/main.8ce95a91.chunk.css.map",
-    "static/js/2.3f9bbf9e.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.3f9bbf9e.chunk.js.LICENSE.txt",
+    "static/js/2.ea99cf70.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.ea99cf70.chunk.js.LICENSE.txt",
     "static/media/LogoF1.png": "/lyubapidan/static/media/LogoF1.48d09aeb.png",
     "static/media/LogoF2.jpg": "/lyubapidan/static/media/LogoF2.2952645f.jpg",
     "static/media/Women1.jpg": "/lyubapidan/static/media/Women1.c5901a19.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9c9ed90c.js",
-    "static/js/2.3f9bbf9e.chunk.js",
+    "static/js/2.ea99cf70.chunk.js",
     "static/css/main.8ce95a91.chunk.css",
-    "static/js/main.f62cb989.chunk.js"
+    "static/js/main.6b210113.chunk.js"
   ]
 }
