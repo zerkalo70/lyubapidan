@@ -15,6 +15,7 @@ export type PostType = {
 }
 export type ProfilePageType = {
     posts: Array<PostType>
+    newPostText: string
 }
 export type DialogPageType = {
     dialogs: Array<DialogType>
@@ -30,34 +31,43 @@ export type RootStateType = {
 
 let state: RootStateType = {
     profilePage: {
-posts: [
-    {id: 1, message: 'Привет', likesCount: 12},
-    {id: 2, message: 'Это мой первый пост!', likesCount: 21}
-]
+        posts: [
+            {id: 1, message: 'Привет', likesCount: 12},
+            {id: 2, message: 'Это мой первый пост!', likesCount: 21}
+        ],
+        newPostText: "NewPostText"
     },
-   dialogsPage: {
-dialogs: [
-    {id: 1, name: 'Люба'},
-    {id: 2, name: 'Маша'},
-    {id: 3, name: 'Даша'}
-],
+    dialogsPage: {
+        dialogs: [
+            {id: 1, name: 'Люба'},
+            {id: 2, name: 'Маша'},
+            {id: 3, name: 'Даша'}
+        ],
 
-messages: [
-    {id: 1, message: 'Я Вас приветствую!'},
-    {id: 2, message: 'Привет!'},
-    {id: 3, message: 'Здорово!'}
-]
-   },
+        messages: [
+            {id: 1, message: 'Я Вас приветствую!'},
+            {id: 2, message: 'Привет!'},
+            {id: 3, message: 'Здорово!'}
+        ]
+    },
     sidebar: {}
 }
-export let addPost = (postMessage: string) => {
-    let newPost: PostType = {
-        id: 5,
+
+export const addPost = (postMessage: string) => {
+    const newPost: PostType = {
+        id: 3,
         message: postMessage,
         likesCount: 0
-    }
+    };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = "";
     rerenderEntireTree(state);
 }
 
-export default state;
+export const updateNewPostText = (newText: string) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+};
+
+// window.state = state;
+    export default state;
