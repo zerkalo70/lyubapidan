@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/lyubapidan/static/css/main.8ce95a91.chunk.css",
-    "main.js": "/lyubapidan/static/js/main.6b210113.chunk.js",
-    "main.js.map": "/lyubapidan/static/js/main.6b210113.chunk.js.map",
+    "main.js": "/lyubapidan/static/js/main.de30dca4.chunk.js",
+    "main.js.map": "/lyubapidan/static/js/main.de30dca4.chunk.js.map",
     "runtime-main.js": "/lyubapidan/static/js/runtime-main.9c9ed90c.js",
     "runtime-main.js.map": "/lyubapidan/static/js/runtime-main.9c9ed90c.js.map",
-    "static/js/2.ea99cf70.chunk.js": "/lyubapidan/static/js/2.ea99cf70.chunk.js",
-    "static/js/2.ea99cf70.chunk.js.map": "/lyubapidan/static/js/2.ea99cf70.chunk.js.map",
+    "static/js/2.9c3306ac.chunk.js": "/lyubapidan/static/js/2.9c3306ac.chunk.js",
+    "static/js/2.9c3306ac.chunk.js.map": "/lyubapidan/static/js/2.9c3306ac.chunk.js.map",
     "index.html": "/lyubapidan/index.html",
-    "precache-manifest.4bb6fb2c221085b2de6bf00fc693935c.js": "/lyubapidan/precache-manifest.4bb6fb2c221085b2de6bf00fc693935c.js",
+    "precache-manifest.e05d088f46a5d2a0268a85731514c0a4.js": "/lyubapidan/precache-manifest.e05d088f46a5d2a0268a85731514c0a4.js",
     "service-worker.js": "/lyubapidan/service-worker.js",
     "static/css/main.8ce95a91.chunk.css.map": "/lyubapidan/static/css/main.8ce95a91.chunk.css.map",
-    "static/js/2.ea99cf70.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.ea99cf70.chunk.js.LICENSE.txt",
+    "static/js/2.9c3306ac.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.9c3306ac.chunk.js.LICENSE.txt",
     "static/media/LogoF1.png": "/lyubapidan/static/media/LogoF1.48d09aeb.png",
     "static/media/LogoF2.jpg": "/lyubapidan/static/media/LogoF2.2952645f.jpg",
     "static/media/Women1.jpg": "/lyubapidan/static/media/Women1.c5901a19.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9c9ed90c.js",
-    "static/js/2.ea99cf70.chunk.js",
+    "static/js/2.9c3306ac.chunk.js",
     "static/css/main.8ce95a91.chunk.css",
-    "static/js/main.6b210113.chunk.js"
+    "static/js/main.de30dca4.chunk.js"
   ]
 }
