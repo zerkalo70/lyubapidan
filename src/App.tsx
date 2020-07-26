@@ -6,13 +6,10 @@ import Nav from "./Components/Navigation/nav";
 import Profile from "./Components/Profile/profile";
 import Dialogs from "./Components/Dialogs/dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
-import {RootStateType} from "./redux/state";
-
-
+import {ActionsTypes, StoreType} from "./redux/state";
 type AppPropsType = {
-    state: RootStateType
-    addPost: (postMessage: string) => void
-    updateNewPostText: (newText: string) => void
+    store: StoreType
+    // dispatch: (action: ActionsTypes) => void
 }
 
 const App = (props: AppPropsType) => {
@@ -24,13 +21,15 @@ const App = (props: AppPropsType) => {
                 <Nav/>
                 <div className="lyubaProjectContent">
                     <Route path={'/profile'} render={() => <Profile
-                        posts={props.state.profilePage.posts}
-                        updateNewPostText={props.updateNewPostText}
-                        newPostText={props.state.profilePage.newPostText}
-                        addPost={props.addPost}/>}/>
+                        posts={props.store.getState().profilePage.posts}
+                        updateNewPostText={props.store.updateNewPostText.bind(props.store)}
+                        newPostText={props.store.getState().profilePage.newPostText}
+                        addPost={props.store.addPost.bind(props.store)}
+                        dispatch={props.store.dispatch.bind(props.store)}
+                    />}/>
                     <Route path={'/dialogs'} render={() => <Dialogs
-                        dialogs={props.state.dialogsPage.dialogs}
-                        messages={props.state.dialogsPage.messages}/>}/>
+                        dialogs={props.store.getState().dialogsPage.dialogs}
+                        messages={props.store.getState().dialogsPage.messages}/>}/>
                 </div>
                 <Footer/>
             </div>

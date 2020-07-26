@@ -26,8 +26,26 @@ export type RootStateType = {
     dialogsPage: DialogPageType
     sidebar: SidebarType
 }
+export type AddPostActionType = {
+    type: "ADD-POST"
+    postMessage: string
+}
+export type UpdateNewPostTextActionType = {
+    type: "UPDATE-NEW-POST-TEXT"
+    newText: string
+}
+export type ActionsTypes = AddPostActionType | UpdateNewPostTextActionType
+export type StoreType = {
+    _state: RootStateType
+    updateNewPostText: (newText: string) => void
+    addPost: (postMessage: string) => void
+    _callsubscriber: () => void
+    subscribe: (observer: () => void) => void
+    getState: () => RootStateType
+    dispatch: (action: ActionsTypes) => void
+}
 
-let store = {
+const store: StoreType = {
     _state: {
     profilePage: {
         posts: [
@@ -51,12 +69,17 @@ let store = {
     },
     sidebar: {}
 },
+    _callsubscriber() {
+        console.log('State');
+    },
+
     getState() {
         return this._state
     },
-    _callsubscriber(state: RootStateType) {
-        console.log('State');
+    subscribe(observer: any) {
+        this._callsubscriber = observer;
     },
+
     addPost(postMessage: string) {
         const newPost: PostType = {
             id: 3,
@@ -65,64 +88,28 @@ let store = {
         };
         this._state.profilePage.posts.push(newPost);
         this._state.profilePage.newPostText = "";
-        this._callsubscriber(this._state);
+        this._callsubscriber();
     },
     updateNewPostText(newText: string) {
         this._state.profilePage.newPostText = newText;
-        this._callsubscriber(this._state);
+        this._callsubscriber();
     },
-    subscribe(observer: any) {
-        this._callsubscriber = observer;
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
+            const newPost: PostType = {
+                id: 3,
+                message: action.postMessage,
+                likesCount: 0
+            };
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = "";
+            this._callsubscriber();
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this._state.profilePage.newPostText = action.newText;
+            this._callsubscriber();
+        }
     }
 }
-
-// let rerenderEntireTree = (state: RootStateType) => {
-//     console.log('State');
-// }
-
-// const state: RootStateType = {
-//     profilePage: {
-//         posts: [
-//             {id: 1, message: 'Привет', likesCount: 12},
-//             {id: 2, message: 'Это мой первый пост!', likesCount: 21}
-//         ],
-//         newPostText: "NewPostText"
-//     },
-//     dialogsPage: {
-//         dialogs: [
-//             {id: 1, name: 'Люба'},
-//             {id: 2, name: 'Маша'},
-//             {id: 3, name: 'Даша'}
-//         ],
-//
-//         messages: [
-//             {id: 1, message: 'Я Вас приветствую!'},
-//             {id: 2, message: 'Привет!'},
-//             {id: 3, message: 'Здорово!'}
-//         ]
-//     },
-//     sidebar: {}
-// }
-
-// export const addPost = (postMessage: string) => {
-//     const newPost: PostType = {
-//         id: 3,
-//         message: postMessage,
-//         likesCount: 0
-//     };
-//     state.profilePage.posts.push(newPost);
-//     state.profilePage.newPostText = "";
-//     rerenderEntireTree(state);
-// }
-
-// export const updateNewPostText = (newText: string) => {
-//     state.profilePage.newPostText = newText;
-//     rerenderEntireTree(state);
-// };
-
-// export const subscribe = (observer: any) => {
-//     rerenderEntireTree = observer;
-// }
 
 // window.state = state;
     export default store;
