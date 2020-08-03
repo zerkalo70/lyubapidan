@@ -19,6 +19,7 @@ export type ProfilePageType = {
 export type DialogPageType = {
     dialogs: Array<DialogType>
     messages: Array<MessageType>
+    newMessageBody: string
 }
 export type SidebarType = {}
 export type RootStateType = {
@@ -26,7 +27,9 @@ export type RootStateType = {
     dialogsPage: DialogPageType
     sidebar: SidebarType
 }
-export type ActionsTypes = ReturnType<typeof addPostAC> | ReturnType<typeof changeNewTextAC>
+export type ActionsTypes = ReturnType<typeof addPostAC>
+    | ReturnType<typeof changeNewTextAC> | ReturnType<typeof sendMessageAC>
+    | ReturnType<typeof updateNewMessageBodyAC>
 export type StoreType = {
     _state: RootStateType
     updateNewPostText: (newText: string) => void
@@ -36,6 +39,12 @@ export type StoreType = {
     getState: () => RootStateType
     dispatch: (action: ActionsTypes) => void
 }
+
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
+const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY";
+const SEND_MESSAGE = "SEND-MESSAGE";
 
 export const addPostAC = (postMessage: string) => {
     return {
@@ -47,6 +56,17 @@ export const changeNewTextAC = (newText: string) => {
     return {
         type: "UPDATE-NEW-POST-TEXT",
         newText: newText
+    } as const
+}
+export const sendMessageAC = () => {
+    return {
+        type: "SEND-MESSAGE"
+    } as const
+}
+export const updateNewMessageBodyAC = (body: string) => {
+    return {
+        type: "UPDATE-NEW-MESSAGE-BODY",
+        body: body
     } as const
 }
 
@@ -70,7 +90,8 @@ const store: StoreType = {
             {id: 1, message: 'Я Вас приветствую!'},
             {id: 2, message: 'Привет!'},
             {id: 3, message: 'Здорово!'}
-        ]
+        ],
+        newMessageBody: ""
     },
     sidebar: {}
 },
@@ -111,6 +132,14 @@ const store: StoreType = {
             this._callsubscriber();
         } else if (action.type === "UPDATE-NEW-POST-TEXT") {
             this._state.profilePage.newPostText = action.newText;
+            this._callsubscriber();
+        } else if (action.type === "UPDATE-NEW-MESSAGE-BODY") {
+            this._state.dialogsPage.newMessageBody = action.body;
+            this._callsubscriber();
+        } else if (action.type === "SEND-MESSAGE") {
+            let body = this._state.dialogsPage.newMessageBody;
+            this._state.dialogsPage.newMessageBody = "";
+            this._state.dialogsPage.messages.push({id: 6, message: body});
             this._callsubscriber();
         }
     }

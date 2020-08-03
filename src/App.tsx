@@ -6,7 +6,7 @@ import Nav from "./Components/Navigation/nav";
 import Profile from "./Components/Profile/profile";
 import Dialogs from "./Components/Dialogs/dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
-import {ActionsTypes, StoreType} from "./redux/state";
+import {StoreType} from "./redux/state";
 type AppPropsType = {
     store: StoreType
     // dispatch: (action: ActionsTypes) => void
@@ -29,7 +29,10 @@ const App = (props: AppPropsType) => {
                     />}/>
                     <Route path={'/dialogs'} render={() => <Dialogs
                         dialogs={props.store.getState().dialogsPage.dialogs}
-                        messages={props.store.getState().dialogsPage.messages}/>}/>
+                        messages={props.store.getState().dialogsPage.messages}
+                        newMessageBody={props.store.getState().dialogsPage.newMessageBody}
+                        dispatch={props.store.dispatch.bind(props.store)}
+                    />}/>
                 </div>
                 <Footer/>
             </div>
