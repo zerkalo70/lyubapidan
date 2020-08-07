@@ -8,8 +8,10 @@ import Dialogs from "./Components/Dialogs/dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import {StoreType} from "./redux/state";
 type AppPropsType = {
-    store: StoreType
+    // store: StoreType
+    store: any
     // dispatch: (action: ActionsTypes) => void
+    dispatch: (action: any) => void
 }
 
 const App = (props: AppPropsType) => {
@@ -22,9 +24,11 @@ const App = (props: AppPropsType) => {
                 <div className="lyubaProjectContent">
                     <Route path={'/profile'} render={() => <Profile
                         posts={props.store.getState().profilePage.posts}
-                        updateNewPostText={props.store.updateNewPostText.bind(props.store)}
+                        // updateNewPostText={props.store.updateNewPostText.bind(props.store)}
+                        updateNewPostText={props.store.updateNewPostText}
                         newPostText={props.store.getState().profilePage.newPostText}
-                        addPost={props.store.addPost.bind(props.store)}
+                        // addPost={props.store.addPost.bind(props.store)}
+                        addPost={props.store.addPost}
                         dispatch={props.store.dispatch.bind(props.store)}
                     />}/>
                     <Route path={'/dialogs'} render={() => <Dialogs

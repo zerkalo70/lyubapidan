@@ -2,14 +2,15 @@ import React from "react";
 import s from "./profile.module.css";
 import MyPosts from "./MyPosts/myPosts";
 import ProfileInfo from "./ProfileInfo/profileInfo";
-import {ActionsTypes, PostType, StoreType} from "../../redux/state";
+import {PostType, StoreType} from "../../redux/state";
+import {ProfileActionsTypes} from "../../redux/profileReducer";
 
 export type ProfilePropsType = {
     posts: Array<PostType>
     newPostText: string
     addPost: (postMessage: string) => void
     updateNewPostText: (newText: string) => void
-    dispatch: (action: ActionsTypes) => void
+    dispatch: (action: ProfileActionsTypes) => void
     // store: StoreType
 }
 
