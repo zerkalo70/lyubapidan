@@ -9,7 +9,7 @@ export let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <App store={store}
-                 dispatch={store.dispatch.bind(store)}
+                 // dispatch={store.dispatch.bind(store)}
              />
         </React.StrictMode>,
         document.getElementById('root')
