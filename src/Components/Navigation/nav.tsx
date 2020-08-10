@@ -13,7 +13,7 @@ const Nav = () => {
                         <NavLink to = {"/dialogs"} activeClassName={s.active}>Сообщения</NavLink>
                     </li>
                     <li>
-                        <a>Новости</a>
+                        <NavLink to = {"/users"} activeClassName={s.active}>Новости</NavLink>
                     </li>
                     <li>
                         <a>Музыка</a>

@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./profileInfo.module.css";
-import LogoF2 from "../Images/LogoF2.jpg";
+import LogoF2 from "../../Images/LogoF2.jpg";
 
 
 const ProfileInfo = () => {
