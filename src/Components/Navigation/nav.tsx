@@ -7,13 +7,16 @@ const Nav = () => {
             <div className={s.nav}>
                 <ul className={s.item}>
                     <li>
-                        <NavLink to = {"/profile"} activeClassName={s.active}>Профиль</NavLink>
+                        <NavLink to = {"/profile"} activeClassName={s.active}>
+                            Профиль</NavLink>
                     </li>
                     <li>
-                        <NavLink to = {"/dialogs"} activeClassName={s.active}>Сообщения</NavLink>
+                        <NavLink to = {"/dialogs"} activeClassName={s.active}>
+                            Сообщения</NavLink>
                     </li>
                     <li>
-                        <NavLink to = {"/users"} activeClassName={s.active}>Новости</NavLink>
+                        <NavLink to = {"/users"} activeClassName={s.active}>
+                            Пользователи</NavLink>
                     </li>
                     <li>
                         <a>Музыка</a>

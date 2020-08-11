@@ -3,9 +3,9 @@
 //     | ReturnType<typeof changeNewTextAC>
 
 
-import Women1 from "../Components/Images/Women1.jpg";
-import Women2 from "../Components/Images/Women1.jpg";
-import Women3 from "../Components/Images/Women1.jpg";
+import Women1 from "../assets/Images/Women1.jpg";
+import Women2 from "../assets/Images/Women1.jpg";
+import Women3 from "../assets/Images/Women1.jpg";
 
 
 const FOLLOW = "FOLLOW";
