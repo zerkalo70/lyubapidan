@@ -5,27 +5,15 @@ import axios from 'axios';
 
 class Users extends React.Component<any>{
 
-    constructor(props: any) {
-        super(props);
-
-            axios.get("https://social-network.samuraijs.com/api/1.0/users")
-                .then((response: any) => {
-                    this.props.setUsers(response.data.items)
-                })
+    componentDidMount() {
+        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+            .then((response: any) => {
+                this.props.setUsers(response.data.items)
+            })
     }
 
-    getUsers = () => {
-        if (this.props.users.length === 0) {
-
-            axios.get("https://social-network.samuraijs.com/api/1.0/users")
-                .then((response: any) => {
-                    this.props.setUsers(response.data.items)
-                })
-        }
-    }
     render() {
         return <div>
-            {/*<button onClick={this.getUsers}>getUsers</button>*/}
             {
                 this.props.users.map((u: any) => <div key={u.id}>
                     <span>
