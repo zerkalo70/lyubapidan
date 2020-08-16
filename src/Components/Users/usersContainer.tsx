@@ -1,20 +1,20 @@
 import React from "react";
 import {connect} from "react-redux";
 import {
-    followAC,
-    setCurrentPageAC,
-    setUsersAC,
-    setUsersTotalCountAC,
-    unfollowAC
+    followAC, setCurrentPageAC, setUsersAC,
+    setUsersTotalCountAC, toggleIsFetchingAC, unfollowAC
 } from "../../redux/usersReducer";
 import axios from "axios";
 import Users from "./users";
+import Preloader from "../common/Preloader/preloader";
 
 class UsersContainer extends React.Component<any> {
 
     componentDidMount() {
+        this.props.toggleIsFetching(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}& count=${this.props.pageSize}`)
             .then((response: any) => {
+                this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
                 this.props.setTotalUsersCount(response.data.totalCount);
             })
@@ -22,15 +22,19 @@ class UsersContainer extends React.Component<any> {
 
     onPageChanged = (pageNumber: any) => {
         this.props.setCurrentPage(pageNumber);
+        this.props.toggleIsFetching(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}& count=${this.props.pageSize}`)
             .then((response: any) => {
+                this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items)
             })
     }
 
     render() {
 
-        return <Users
+        return <>
+            {this.props.isFetching ? <Preloader/> : null}
+        <Users
             totalUsersCount={this.props.totalUsersCount}
             pageSize={this.props.pageSize}
             currentPage={this.props.currentPage}
@@ -38,6 +42,7 @@ class UsersContainer extends React.Component<any> {
             users={this.props.users}
             follow={this.props.follow}
             unfollow={this.props.unfollow}/>
+            </>
     }
 }
 
@@ -46,7 +51,8 @@ let mapStateToProps = (state: any) => {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage
+        currentPage: state.usersPage.currentPage,
+        isFetching: state.usersPage.isFetching
     }
 }
 
@@ -66,6 +72,9 @@ follow: (userId: any) => {
         },
         setTotalUsersCount: (totalCount: any) => {
             dispatch(setUsersTotalCountAC(totalCount))
+        },
+        toggleIsFetching: (isFetching: any) => {
+    dispatch(toggleIsFetchingAC(isFetching))
         }
 
     }

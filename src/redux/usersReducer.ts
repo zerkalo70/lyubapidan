@@ -1,11 +1,6 @@
-
 // export type ProfileActionsTypes = ReturnType<typeof addPostAC>
 //     | ReturnType<typeof changeNewTextAC>
 
-
-import Women1 from "../assets/Images/Women1.jpg";
-import Women2 from "../assets/Images/Women1.jpg";
-import Women3 from "../assets/Images/Women1.jpg";
 
 
 const FOLLOW = "FOLLOW";
@@ -13,12 +8,14 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
 const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 const SET_TOTAL_USERS_COUNT = "SET_TOTAL_USERS_COUNT";
+const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 
 let initialState: any = {
     users: [],
-    pageSize: 200,
+    pageSize: 300,
     totalUsersCount: 0,
-    currentPage: 1
+    currentPage: 1,
+    isFetching: false
 };
 
 const usersReducer = (state: any = initialState, action: any) => {
@@ -53,9 +50,13 @@ const usersReducer = (state: any = initialState, action: any) => {
             return {
                 ...state, currentPage: action.currentPage
             }
-            case SET_TOTAL_USERS_COUNT:
+        case SET_TOTAL_USERS_COUNT:
             return {
                 ...state, totalUsersCount: action.count
+            }
+        case TOGGLE_IS_FETCHING:
+            return {
+                ...state, isFetching: action.isFetching
             }
 
         default:
@@ -63,13 +64,27 @@ const usersReducer = (state: any = initialState, action: any) => {
     }
 }
 
-export const followAC: any = (userId: any) => {return {type: FOLLOW, userId}};
-export const unfollowAC: any = (userId: any) => {return {type: UNFOLLOW, userId}};
-export const setUsersAC: any = (users: any) => {return {type: SET_USERS, users}};
+export const followAC: any = (userId: any) => {
+    return {type: FOLLOW, userId}
+};
+export const unfollowAC: any = (userId: any) => {
+    return {type: UNFOLLOW, userId}
+};
+export const setUsersAC: any = (users: any) => {
+    return {type: SET_USERS, users}
+};
 export const setCurrentPageAC: any =
-    (currentPage: any) => {return {type: SET_CURRENT_PAGE, currentPage}};
+    (currentPage: any) => {
+        return {type: SET_CURRENT_PAGE, currentPage}
+    };
 export const setUsersTotalCountAC: any =
-    (totalUsersCount: any) => {return {type: SET_TOTAL_USERS_COUNT, count: totalUsersCount}};
+    (totalUsersCount: any) => {
+        return {type: SET_TOTAL_USERS_COUNT, count: totalUsersCount}
+    };
+export const toggleIsFetchingAC: any =
+    (isFetching: any) => {
+        return {type: TOGGLE_IS_FETCHING, count: isFetching}
+    };
 
 
 export default usersReducer;
