@@ -17,7 +17,7 @@ class UsersContainer extends React.Component<any> {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
                 this.props.setTotalUsersCount(response.data.totalCount);
-            })
+            });
     }
 
     onPageChanged = (pageNumber: any) => {
@@ -81,9 +81,5 @@ let mapStateToProps = (state: any) => {
 // }
 
 export default connect(mapStateToProps, {
-    follow,
-    unfollow,
-    setUsers,
-    setCurrentPage,
-    setTotalUsersCount,
-    toggleIsFetching}) (UsersContainer);
+    follow, unfollow, setUsers, setCurrentPage,
+    setTotalUsersCount, toggleIsFetching}) (UsersContainer);
