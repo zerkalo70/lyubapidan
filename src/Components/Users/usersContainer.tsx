@@ -8,7 +8,7 @@ import axios from "axios";
 import Users from "./users";
 import Preloader from "../common/Preloader/preloader";
 
-class UsersContainer extends React.Component<any> {
+class UsersContainer extends React.Component<any, any> {
 
     componentDidMount() {
         this.props.toggleIsFetching(true);
