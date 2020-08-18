@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
 import Nav from "./Components/Navigation/nav";
 import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./Components/Dialogs/dialogsContainer";
 import UsersContainer from "./Components/Users/usersContainer";
 import ProfileContainer from "./Components/Profile/profileContainer";
+import HeaderContainer from "./Components/Header/headerContainer";
 
 // type AppPropsType = {
     // store: any
@@ -19,11 +19,11 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="lyubaProject">
-                <Header/>
+                <HeaderContainer/>
                 <Nav/>
                 <div className="lyubaProjectContent">
 
-                           <Route path='/profile/:userId'
+                           <Route path='/profile/:userId?'
                            render={() => <ProfileContainer/>}/>
 
                     <Route path='/dialogs'

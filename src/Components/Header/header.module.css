@@ -7,3 +7,12 @@ header {
 .headerImg {
     margin-left: 50px;
 }
+
+.loginBlock {
+    float: right;
+    margin-right: 50px;
+}
+
+.loginBlock a {
+    color: green;
+}
