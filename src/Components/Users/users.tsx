@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./users.module.css";
 import Women3 from "../../assets/Images/Women3.jpg";
 import {NavLink} from "react-router-dom";
-import axios from "axios";
+
 
 let Users = (props: any) => {
 
@@ -16,14 +16,13 @@ let Users = (props: any) => {
     return (
         <div>
             <div>
-                {pages.map((p: any) => {
-                    return (
-                        <span className={props.currentPage === p
-                            ? styles.selectedPage : styles.page}
-                              onClick={(event) => {
-                                  props.onPageChanged(p)
-                              }}>{p}</span>
-                    )
+                {pages.map(p => {
+                    return <span className={props.currentPage === p ? styles.selectedPage : styles.Page}
+                              onClick={(e) => {
+                                  props.onPageChanged(p);
+                              }}>
+                            {p}</span>
+
                 })}
             </div>
             {
@@ -37,32 +36,10 @@ let Users = (props: any) => {
                         </div>
                         <div>
                             {u.followed
-                                ? <button onClick={() => {
-                                    axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
-                                        {withCredentials: true,
-                                        headers: {
-                                            "API-KEY": "bf102d8c-cfd2-4d9c-a6c8-a4c689dcc873"
-                                        }})
-                                        .then((response: any) => {
-                                            if (response.data.resultCode === 0) {
-                                                props.unfollow(u.id)
-                                            }
-                                        });
-
-                                }}>Unfollow</button>
-                                : <button onClick={() => {
-                                    axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
-                                        {}, {withCredentials: true,
-                                            headers: {
-                                                "API-KEY": "bf102d8c-cfd2-4d9c-a6c8-a4c689dcc873"
-                                            }})
-                                        .then((response: any) => {
-                                            if (response.data.resultCode === 0) {
-                                                props.follow(u.id);
-                                            }
-                                        });
-
-                                }}>follow</button>}
+                                ? <button disabled={props.followingInProgress.some((id: any) => id === u.id)}
+                                          onClick={() => {props.unfollow(u.id);}}>Unfollow</button>
+                                : <button disabled={props.followingInProgress.some((id: any) => id === u.id)}
+                                          onClick={() => {props.follow(u.id);}}>follow</button>}
                         </div>
                     </span>
                     <span>

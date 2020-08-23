@@ -2,6 +2,7 @@ import  axios from "axios";
 
 
 
+
 const instance = axios.create({
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
@@ -12,17 +13,17 @@ const instance = axios.create({
 
 export const usersAPI = {
     getUsers(currentPage: any, pageSize: any) {
-        return instance.get(`users?page=${currentPage}& count=${pageSize}`)
+        return instance.get(`users?page=${currentPage}&count=${pageSize}`)
             .then((response: any) => {
                 return response.data;
             });
+    },
+    follow(userId: any) {
+        return instance.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+    },
+
+    unfollow(userId: any) {
+        return instance.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
     }
 }
 
-// export const getUsers = (currentPage: any, pageSize: any) => {
-//     return axios.get(baseUrl + `users?page=${currentPage}& count=${pageSize}`,
-//         {withCredentials: true})
-//         .then(response => {
-//             return response.data;
-//         });
-// }
