@@ -1,3 +1,5 @@
+import {usersAPI} from "../api/api";
+
 export type ProfileActionsTypes = ReturnType<typeof addPostAC>
     | ReturnType<typeof changeNewTextAC>
 
@@ -43,6 +45,12 @@ const profileReducer = (state = initialState, action: ProfileActionsTypes) => {
 
 export const addPostAC: any = () => ({type: "ADD-POST", postMessage: postMessage}) as const
 export const setUserProfile: any = (profile: any) => ({type: "SET_USER_PROFILE", profile}) as const
+export const getUserProfile: any = (userId: any) => (dispatch: any) => {
+    usersAPI.getProfile(userId)
+        .then((response: any) => {
+            dispatch(setUserProfile(response.data));
+        });
+}
 export const changeNewTextAC = (newText: string) => ({type: "UPDATE-NEW-POST-TEXT", newText: newText}) as const
 
 export default profileReducer;

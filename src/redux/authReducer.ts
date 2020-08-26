@@ -2,6 +2,8 @@
 //     | ReturnType<typeof changeNewTextAC>
 
 
+import {authAPI} from "../api/api";
+
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
 const SET_USER_DATA = "SET_USER_DATA";
@@ -29,5 +31,14 @@ const authReducer = (state: any = initialState, action: any) => {
 
 export const setAuthUserData: any = (userId: any, email: any, login: any) =>
     ({type: SET_USER_DATA, data: {userId, email, login}});
+export const getAuthUserData: any = () => (dispatch: any) => {
+    authAPI.me()
+        .then((response: any) => {
+            if (response.data.resultCode === 0) {
+                let {id, email, login} = response.data.data;
+                dispatch(setAuthUserData(id, email, login));
+            }
+        });
+}
 
 export default authReducer;

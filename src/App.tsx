@@ -7,13 +7,8 @@ import DialogsContainer from "./Components/Dialogs/dialogsContainer";
 import UsersContainer from "./Components/Users/usersContainer";
 import ProfileContainer from "./Components/Profile/profileContainer";
 import HeaderContainer from "./Components/Header/headerContainer";
+import Login from "./Components/Login/login";
 
-// type AppPropsType = {
-    // store: any
-    // dispatch: (action: any) => void
-// }
-
-// const App = (props: AppPropsType) => {
 const App = () => {
 
     return (
@@ -23,7 +18,7 @@ const App = () => {
                 <Nav/>
                 <div className="lyubaProjectContent">
 
-                           <Route path='/profile/:userId?'
+                    <Route path='/profile/:userId?'
                            render={() => <ProfileContainer/>}/>
 
                     <Route path='/dialogs'
@@ -31,6 +26,9 @@ const App = () => {
 
                     <Route path='/users'
                            render={() => <UsersContainer/>}/>
+
+                    <Route path='/login'
+                           render={() => <Login/>}/>
 
                 </div>
                 <Footer/>
