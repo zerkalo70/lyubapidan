@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "77486c63e8e2718d6a3d2086b6571330",
+    "revision": "ef2631aaf4a99bd27825e43989a2dde5",
     "url": "/lyubapidan/index.html"
   },
   {
-    "revision": "cfc51b89429aad04a6b9",
-    "url": "/lyubapidan/static/css/main.f4ec89ae.chunk.css"
+    "revision": "43c98c8fd9e9ae4930b6",
+    "url": "/lyubapidan/static/css/main.8188c5e8.chunk.css"
   },
   {
-    "revision": "0bf966b9fcce55fdc2ed",
-    "url": "/lyubapidan/static/js/2.8cf58391.chunk.js"
+    "revision": "61d20fc7a9b83b446b7b",
+    "url": "/lyubapidan/static/js/2.3d8095ce.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/lyubapidan/static/js/2.8cf58391.chunk.js.LICENSE.txt"
+    "url": "/lyubapidan/static/js/2.3d8095ce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cfc51b89429aad04a6b9",
-    "url": "/lyubapidan/static/js/main.057f8512.chunk.js"
+    "revision": "43c98c8fd9e9ae4930b6",
+    "url": "/lyubapidan/static/js/main.1564b5e5.chunk.js"
   },
   {
     "revision": "854b4a02ac934fad0dce",
