@@ -2,17 +2,29 @@ import React from 'react';
 import './App.css';
 import Footer from "./Components/Footer/footer";
 import Nav from "./Components/Navigation/nav";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import DialogsContainer from "./Components/Dialogs/dialogsContainer";
 import UsersContainer from "./Components/Users/usersContainer";
 import ProfileContainer from "./Components/Profile/profileContainer";
 import HeaderContainer from "./Components/Header/headerContainer";
 import Login from "./Components/Login/login";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import {withRouter} from "react-router-dom";
+import {initializeApp} from "./redux/appReducer";
+import Preloader from "./Components/common/Preloader/preloader";
 
-const App = () => {
+class App extends React.Component<any, any> {
 
-    return (
-        <BrowserRouter>
+    componentDidMount() {
+        this.props.initializeApp();
+    }
+
+    render() {
+        if (!this.props.initialized) {
+            return <Preloader/>
+        }
+        return (
             <div className="lyubaProject">
                 <HeaderContainer/>
                 <Nav/>
@@ -33,8 +45,14 @@ const App = () => {
                 </div>
                 <Footer/>
             </div>
-        </BrowserRouter>
-    )
+        )
+    }
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({
+    initialized: state.app.initialized
+})
+
+export default compose<any>(
+    withRouter,
+    connect(mapStateToProps, {initializeApp}))(App);
