@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e7d990086b543788f026159e36c615e",
+    "revision": "82268573248d9b300959a84c841d66dd",
     "url": "/lyubapidan/index.html"
   },
   {
-    "revision": "2de82c38c7a219f8a16e",
+    "revision": "a61984016ffa632f1784",
     "url": "/lyubapidan/static/css/main.9742aa4e.chunk.css"
   },
   {
-    "revision": "a71eb8b900e6da778a15",
-    "url": "/lyubapidan/static/js/2.908ba782.chunk.js"
+    "revision": "6e587810afd3ecddb183",
+    "url": "/lyubapidan/static/js/2.1a83c77f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/lyubapidan/static/js/2.908ba782.chunk.js.LICENSE.txt"
+    "url": "/lyubapidan/static/js/2.1a83c77f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2de82c38c7a219f8a16e",
-    "url": "/lyubapidan/static/js/main.9cf8080b.chunk.js"
+    "revision": "a61984016ffa632f1784",
+    "url": "/lyubapidan/static/js/main.b5819de7.chunk.js"
   },
   {
     "revision": "854b4a02ac934fad0dce",
