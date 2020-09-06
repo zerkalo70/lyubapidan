@@ -2,7 +2,7 @@ import React from "react";
 import s from "./profileInfo.module.css";
 import LogoF2 from "../../../assets/Images/LogoF2.jpg";
 import Preloader from "../../common/Preloader/preloader";
-import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props: any) => {
     if (!props.profile) {
@@ -15,7 +15,7 @@ const ProfileInfo = (props: any) => {
             {/*</div>*/}
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large} alt="No Photo"/>
-                <ProfileStatus status={props.status}
+                <ProfileStatusWithHooks status={props.status}
                 updateStatus={props.updateStatus}/>
             </div>
         </div>
