@@ -1,0 +1,8 @@
+.selectedPage{
+    color: red;
+    font-weight: bold;
+}
+
+.Page {
+    color: blue;
+}
