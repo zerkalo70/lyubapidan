@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/lyubapidan/static/css/main.c237a519.chunk.css",
-    "main.js": "/lyubapidan/static/js/main.03e17585.chunk.js",
-    "main.js.map": "/lyubapidan/static/js/main.03e17585.chunk.js.map",
+    "main.js": "/lyubapidan/static/js/main.f3dc9715.chunk.js",
+    "main.js.map": "/lyubapidan/static/js/main.f3dc9715.chunk.js.map",
     "runtime-main.js": "/lyubapidan/static/js/runtime-main.9c9ed90c.js",
     "runtime-main.js.map": "/lyubapidan/static/js/runtime-main.9c9ed90c.js.map",
     "static/js/2.848a2d4a.chunk.js": "/lyubapidan/static/js/2.848a2d4a.chunk.js",
     "static/js/2.848a2d4a.chunk.js.map": "/lyubapidan/static/js/2.848a2d4a.chunk.js.map",
     "index.html": "/lyubapidan/index.html",
-    "precache-manifest.a914bcf02f92623f9dd5277dbfa33af6.js": "/lyubapidan/precache-manifest.a914bcf02f92623f9dd5277dbfa33af6.js",
+    "precache-manifest.4c1a677ab2b6a8727f87f8c155757cc4.js": "/lyubapidan/precache-manifest.4c1a677ab2b6a8727f87f8c155757cc4.js",
     "service-worker.js": "/lyubapidan/service-worker.js",
     "static/css/main.c237a519.chunk.css.map": "/lyubapidan/static/css/main.c237a519.chunk.css.map",
     "static/js/2.848a2d4a.chunk.js.LICENSE.txt": "/lyubapidan/static/js/2.848a2d4a.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.9c9ed90c.js",
     "static/js/2.848a2d4a.chunk.js",
     "static/css/main.c237a519.chunk.css",
-    "static/js/main.03e17585.chunk.js"
+    "static/js/main.f3dc9715.chunk.js"
   ]
 }
