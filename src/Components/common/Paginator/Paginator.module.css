@@ -1,8 +1,18 @@
-.selectedPage{
+.paginator {
+    margin: 10px;
+}
+
+.pageNumber.selectedPage{
     color: red;
     font-weight: bold;
+    border-color: black;
 }
 
 .Page {
     color: blue;
+}
+
+.pageNumber {
+    padding: 2px;
+    border: 1px solid gray;
 }
