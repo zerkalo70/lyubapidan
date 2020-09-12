@@ -3,9 +3,7 @@ import './App.css';
 import Footer from "./Components/Footer/footer";
 import Nav from "./Components/Navigation/nav";
 import {Route} from "react-router-dom";
-import DialogsContainer from "./Components/Dialogs/dialogsContainer";
 import UsersContainer from "./Components/Users/usersContainer";
-import ProfileContainer from "./Components/Profile/profileContainer";
 import HeaderContainer from "./Components/Header/headerContainer";
 import Login from "./Components/Login/login";
 import {connect} from "react-redux";
@@ -13,6 +11,10 @@ import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./Components/common/Preloader/preloader";
+import {withSuspense} from "./hoc/withSuspense";
+
+const DialogsContainer = React.lazy(() => import('./Components/Dialogs/dialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./Components/Profile/profileContainer'));
 
 class App extends React.Component<any, any> {
 
@@ -31,10 +33,10 @@ class App extends React.Component<any, any> {
                 <div className="lyubaProjectContent">
 
                     <Route path='/profile/:userId?'
-                           render={() => <ProfileContainer/>}/>
+                           render={withSuspense(ProfileContainer)}/>
 
                     <Route path='/dialogs'
-                           render={() => <DialogsContainer/>}/>
+                           render={withSuspense(DialogsContainer)}/>
 
                     <Route path='/users'
                            render={() => <UsersContainer/>}/>
