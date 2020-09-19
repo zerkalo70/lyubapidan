@@ -1,4 +1,5 @@
 import {profileAPI, usersAPI} from "../api/api";
+import {stopSubmit} from "redux-form";
 
 export type ProfileActionsTypes = ReturnType<typeof addPostAC>
 
@@ -75,5 +76,18 @@ export const savePhoto: any = (file: any) => async (dispatch: any) => {
         dispatch(savePhotoSuccess(response.data.data.photos));
     }
 }
+
+export const saveProfile: any = (profile: any) => async (dispatch: any, getState: any) => {
+    const userId = getState().auth.userId;
+    const response = await profileAPI.saveProfile(profile);
+    if (response.data.resultCode === 0) {
+        dispatch(getUserProfile(userId));
+    }else {
+        dispatch(stopSubmit("edit-profile", {_error: response.data.messages[0]}));
+        return Promise.reject(response.data.messages[0]);
+    }
+}
+
+
 
 export default profileReducer;

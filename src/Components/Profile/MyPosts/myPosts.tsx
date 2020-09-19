@@ -8,8 +8,10 @@ import {Textarea} from "../../common/FormsControls/FormsControls";
 
 const MyPosts = React.memo((props: any) => {
 
-    let postElement = props.posts.map(
-        (p: any) => <Post key={p.id} id={p.id} message={p.message} likesCount={p.likesCount}/>);
+    let postElements =
+        [...props.posts]
+            .reverse()
+            .map(p => <Post key={p.id} id={p.id} message={p.message} likesCount={p.likesCount}/>);
 
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
@@ -22,7 +24,7 @@ const MyPosts = React.memo((props: any) => {
             <h3>My posts</h3>
             <AddNewPostFormRedux onSubmit={onAddPost}/>
             <div className={s.posts}>
-                {postElement}
+                {postElements}
             </div>
         </div>
     )
