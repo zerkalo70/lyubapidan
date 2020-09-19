@@ -1,47 +1,51 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "673651b5d14fe7c83d5b487f7ae0731d",
+    "revision": "2ec24d388f84f72faf7a7c36a4ece16e",
     "url": "/lyubapidan/index.html"
   },
   {
-    "revision": "91cdea7be487e419b1e1",
+    "revision": "3baa1bb12e5e3b1ba4f1",
     "url": "/lyubapidan/static/css/3.dde9d69a.chunk.css"
   },
   {
-    "revision": "7764091758b2b07e6784",
+    "revision": "06f407aa1c8cde44dd92",
     "url": "/lyubapidan/static/css/4.6fae30ae.chunk.css"
   },
   {
-    "revision": "febc780e08431b1f1e19",
+    "revision": "df8ed1f9606e279fb0ec",
     "url": "/lyubapidan/static/css/main.013fb1a6.chunk.css"
   },
   {
-    "revision": "ff8d504f355401fa9530",
-    "url": "/lyubapidan/static/js/2.677f84be.chunk.js"
+    "revision": "901b70407feeb4d80bdb",
+    "url": "/lyubapidan/static/js/2.3595c527.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/lyubapidan/static/js/2.677f84be.chunk.js.LICENSE.txt"
+    "url": "/lyubapidan/static/js/2.3595c527.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "91cdea7be487e419b1e1",
-    "url": "/lyubapidan/static/js/3.7d180025.chunk.js"
+    "revision": "3baa1bb12e5e3b1ba4f1",
+    "url": "/lyubapidan/static/js/3.afefeb8d.chunk.js"
   },
   {
-    "revision": "7764091758b2b07e6784",
-    "url": "/lyubapidan/static/js/4.544fd6ec.chunk.js"
+    "revision": "06f407aa1c8cde44dd92",
+    "url": "/lyubapidan/static/js/4.ccdcfc92.chunk.js"
   },
   {
-    "revision": "febc780e08431b1f1e19",
-    "url": "/lyubapidan/static/js/main.0d2a13d3.chunk.js"
+    "revision": "df8ed1f9606e279fb0ec",
+    "url": "/lyubapidan/static/js/main.d2b0c454.chunk.js"
   },
   {
-    "revision": "83db0d85af32687732f8",
-    "url": "/lyubapidan/static/js/runtime-main.df961cfc.js"
+    "revision": "3cff0e814bfb8c35850c",
+    "url": "/lyubapidan/static/js/runtime-main.b1a9f15d.js"
   },
   {
     "revision": "48d09aeb42295836badbcb2d91c4d2ef",
     "url": "/lyubapidan/static/media/LogoF1.48d09aeb.png"
+  },
+  {
+    "revision": "2952645f530ea5e19374d7f6020d4f61",
+    "url": "/lyubapidan/static/media/LogoF2.2952645f.jpg"
   },
   {
     "revision": "c5901a19cf1de0bd997eb400a500184b",
