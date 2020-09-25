@@ -4,21 +4,33 @@ export type DialogsActionsTypes = ReturnType<typeof sendMessageAC>
 
 const SEND_MESSAGE = "SEND-MESSAGE";
 
-let initialState: any= {
+type DialogType = {
+    id: number
+    name: string
+}
+type MessageType = {
+    id: number
+    message: string
+}
+
+let initialState= {
     dialogs: [
         {id: 1, name: 'Люба'},
         {id: 2, name: 'Маша'},
         {id: 3, name: 'Даша'}
-    ],
+    ] as Array<DialogType>,
 
     messages: [
         {id: 1, message: 'Я Вас приветствую!'},
         {id: 2, message: 'Привет!'},
         {id: 3, message: 'Здорово!'}
-    ]
+    ] as Array<MessageType>
 }
 
-const dialogsReducer = (state = initialState, action: DialogsActionsTypes) => {
+export type InitialStateType = typeof initialState
+
+const dialogsReducer = (state = initialState,
+                        action: DialogsActionsTypes): InitialStateType => {
 
 switch (action.type) {
 
@@ -33,9 +45,15 @@ switch (action.type) {
         return state
     }
 }
-export const sendMessageAC = (newMessageBody: any) => {
+
+type SendMessageACType = {
+    type: typeof SEND_MESSAGE
+    newMessageBody: string
+}
+
+export const sendMessageAC = (newMessageBody: string): SendMessageACType => {
     return {
-        type: "SEND-MESSAGE", newMessageBody
+        type: SEND_MESSAGE, newMessageBody
     } as const
 }
 
