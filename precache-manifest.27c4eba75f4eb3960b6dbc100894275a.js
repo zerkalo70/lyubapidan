@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea25a1cb09f5bb5b6b1816df0d5ca630",
+    "revision": "3856cd140d39ebc4536f234700ff620b",
     "url": "/lyubapidan/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lyubapidan/static/css/4.6fae30ae.chunk.css"
   },
   {
-    "revision": "0bf130307cd3687439da",
+    "revision": "b6abe5685f2ecf300c9f",
     "url": "/lyubapidan/static/css/main.013fb1a6.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lyubapidan/static/js/4.6084ae23.chunk.js"
   },
   {
-    "revision": "0bf130307cd3687439da",
-    "url": "/lyubapidan/static/js/main.56bb1f06.chunk.js"
+    "revision": "b6abe5685f2ecf300c9f",
+    "url": "/lyubapidan/static/js/main.4c576fcf.chunk.js"
   },
   {
     "revision": "2bcba96ca3deef2a3e1d",
